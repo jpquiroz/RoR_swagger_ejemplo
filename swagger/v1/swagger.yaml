@@ -1,0 +1,99 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/cars":
+    post:
+      summary: Crea un Automovil
+      tags:
+      - Cars
+      parameters: []
+      responses:
+        '201':
+          description: Automovil creado
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                foto_url:
+                  type: string
+                status:
+                  type: boolean
+              required:
+              - nombre
+              - status
+          application/xml:
+            schema:
+              type: object
+              properties:
+                nombre:
+                  type: string
+                foto_url:
+                  type: string
+                status:
+                  type: boolean
+              required:
+              - nombre
+              - status
+  "/api/v1/cars/{id}":
+    get:
+      summary: Retorna un Automovil
+      tags:
+      - Cars
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: name found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  nombre:
+                    type: string
+                  foto_url:
+                    type: string
+                  status:
+                    type: boolean
+                required:
+                - id
+                - nombre
+                - status
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  nombre:
+                    type: string
+                  foto_url:
+                    type: string
+                  status:
+                    type: boolean
+                required:
+                - id
+                - nombre
+                - status
+        '404':
+          description: Automovil no encontrado
+servers:
+- url: http://{defaultHost}
+  variables:
+    defaultHost:
+      default: 127.0.0.1:3000
