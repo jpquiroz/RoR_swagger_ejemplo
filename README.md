@@ -25,4 +25,3 @@ rails server
 
 Si todo esta Ok, podrás ver la Api funcionando en: http://127.0.0.1:3000/api-docs
 
-
