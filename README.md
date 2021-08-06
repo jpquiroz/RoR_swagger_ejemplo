@@ -4,11 +4,12 @@
 Ejemplo de documentación de una Api con swagger en Ruby On Rails, usando la gema rswag.
 
 * Requisitos:
-Rails 6 >=
 
-ruby  2.7 >=
+  - rails 6 >=
 
-rswag
+  - ruby  2.7 >=
+
+  - rswag
 
 
 
