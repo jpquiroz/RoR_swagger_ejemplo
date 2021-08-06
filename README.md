@@ -5,8 +5,11 @@ Ejemplo de documentación de una Api con swagger en Ruby On Rails, usando la gem
 
 * Requisitos:
 Rails 6 >=
+
 ruby  2.7 >=
+
 rswag
+
 
 
 * Instalación:
@@ -23,5 +26,5 @@ rake rswag:specs:swaggerize
 
 rails server
 
-Si todo esta Ok, podrás ver la Api funcionando en: http://127.0.0.1:3000/api-docs
+Si todo esta Ok, podrás ver la documentación de la Api funcionando en: http://127.0.0.1:3000/api-docs
 
