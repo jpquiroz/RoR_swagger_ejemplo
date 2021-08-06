@@ -13,19 +13,18 @@ Ejemplo de documentación de una Api con swagger en Ruby On Rails, usando la gem
 
 
 
-* Instalación:
+* Para instalar la app, ejecuta los siguientes comandos:
 
-bundle install
+  - bundle install
 
-rails generate rspec:install
+  - rails generate rspec:install
 
-rails g rswag:install
+  - rails g rswag:install
 
-rake db:migrate
+  - rake db:migrate
 
-rake rswag:specs:swaggerize
+  - rake rswag:specs:swaggerize
 
-rails server
+  - rails server
 
 Si todo esta Ok, podrás ver la documentación de la Api funcionando en: http://127.0.0.1:3000/api-docs
-
