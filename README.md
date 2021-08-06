@@ -1,24 +1,28 @@
 # README
+# RoR_swagger_ejemplo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ejemplo de documentación de una Api con swagger en Ruby On Rails, usando la gema rswag.
 
-Things you may want to cover:
+* Requisitos:
+Rails 6 >=
+ruby  2.7 >=
+rswag
 
-* Ruby version
 
-* System dependencies
+* Instalación:
 
-* Configuration
+bundle install
 
-* Database creation
+rails generate rspec:install
 
-* Database initialization
+rails g rswag:install
 
-* How to run the test suite
+rake db:migrate
 
-* Services (job queues, cache servers, search engines, etc.)
+rake rswag:specs:swaggerize
 
-* Deployment instructions
+rails server
 
-* ...
+Si todo esta Ok, podrás ver la Api funcionando en: http://127.0.0.1:3000/api-docs
+
+
